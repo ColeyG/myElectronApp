@@ -1,0 +1,41 @@
+@font-face{font-family:Melee;src:url("../fonts/UniversLTStd-BoldCn.otf")}
+/*
+Colors:
+Cadet Blue: #5F9EA0
+Red: #FF4949
+Off White: #F1F7ED
+Off Black: #23252B
+*/
+body{
+    background-color: #F1F7ED;
+}
+.topBar{
+    height:25px;
+    width:100%;
+    background-color: #5f9ea0;
+    -webkit-user-select: none;
+    -webkit-app-region: drag;
+    display:flex;
+    justify-content: flex-end;
+    align-content: center;
+    flex-direction: row;
+}
+.topBarButton{
+    -webkit-app-region: no-drag;
+    text-decoration: none;
+    transition:.2s;
+}
+.topBarButton p{
+    font-family:Melee;
+    color:white;
+}
+.close{
+    height:25px;
+    width:40px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.close:hover{
+    background-color: #FF4949;
+}
