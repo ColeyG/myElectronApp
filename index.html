@@ -12,15 +12,13 @@
       <a href="#" class="close topBarButton"><p>X</p></a>
     </div>
     <h1>Cole's Magic Electron App</h1>
-    <!-- <a href="#" class="close"><p>Close</p></a> -->
     <script>
       require('./renderer.js')
     </script>
   
     <script>
       var socket = io.connect('http://localhost:3000/');
-
-      socket.emit('my other event','asdf zxcv qwer');
+      socket.emit('pinger','asdf zxcv qwer');
     </script>
     <script src="js/windowEvents.js"></script>
   </body>
