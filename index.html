@@ -5,15 +5,20 @@
     <title>Cole's Magic Electron App</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
   </head>
   <body>
     <div class="topBar">
       <a href="#" class="close topBarButton"><p>X</p></a>
     </div>
     <h1>Cole's Magic Electron App</h1>
-    <!-- <a href="#" class="close"><p>Close</p></a> -->
     <script>
       require('./renderer.js')
+    </script>
+  
+    <script>
+      var socket = io.connect('http://localhost:3000/');
+      socket.emit('pinger','asdf zxcv qwer');
     </script>
     <script src="js/windowEvents.js"></script>
   </body>
