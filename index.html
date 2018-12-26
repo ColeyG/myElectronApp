@@ -5,6 +5,7 @@
     <title>Cole's Magic Electron App</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
   </head>
   <body>
     <div class="topBar">
@@ -15,13 +16,11 @@
     <script>
       require('./renderer.js')
     </script>
-    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+  
     <script>
-      var socket = io.connect('http://localhost');
-      socket.on('news', function (data) {
-        console.log(data);
-        socket.emit('my other event', { my: 'data' });
-      });
+      var socket = io.connect('http://localhost:3000/');
+
+      socket.emit('my other event','asdf zxcv qwer');
     </script>
     <script src="js/windowEvents.js"></script>
   </body>
