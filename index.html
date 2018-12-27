@@ -12,14 +12,13 @@
       <a href="#" class="close topBarButton"><p>X</p></a>
     </div>
     <h1>Cole's Magic Electron App</h1>
+    <input type="text" class="message-field">
+    <a href="#" class='submit-message'>Submit</a>
+    <p class='message-container'></p>
     <script>
       require('./renderer.js')
     </script>
   
-    <script>
-      var socket = io.connect('http://localhost:3000/');
-      socket.emit('pinger','asdf zxcv qwer');
-    </script>
     <script src="js/windowEvents.js"></script>
   </body>
 </html>
