@@ -20,7 +20,7 @@ io.on('connection', function (socket) {
 
   socket.on('send message',(data)=>{
     console.log('mes: '+data);
-    socket.emit('message recieve',data);
+    io.emit('message recieve',data);
   });
 
   socket.on('pinger', function (data) {
